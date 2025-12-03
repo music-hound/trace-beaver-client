@@ -5,6 +5,8 @@ export async function uploadImage(file: File): Promise<string> {
   const formData = new FormData();
   formData.append('file', file);
 
+  console.log('Uploading to API endpoint:', API_ENDPOINT);
+
   const response = await fetch(API_ENDPOINT, {
     method: 'POST',
     body: formData

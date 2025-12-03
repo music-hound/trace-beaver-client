@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { UploadForm } from './components/UploadForm';
 import { Preview } from './components/Preview';
+import { registerServiceWorker } from './pwa';
 import './styles.css';
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
     </main>
   );
 }
+
+registerServiceWorker();
 
 const rootElement = document.getElementById('root');
 
